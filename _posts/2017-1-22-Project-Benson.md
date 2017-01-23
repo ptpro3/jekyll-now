@@ -29,14 +29,14 @@ Here is the list of stations with resident count for women in tech occupations >
 Finding the cumulative station traffic for the month required joining the four weeks of turnstile data and aggregating multiple turnstile machines for each station. In order to deal with turnstile counters with mismatched values or counter resets, we added T/F flags to the datasets at machine/counter changes. After aggregation, we still had some negative values and unexpectedly large values due to further counter value errors. We ignored these values by choosing station counts between 0 and 10,000 per 4 hour timeblock.
 
 ### Locations to Focus Flyering / Promotion Efforts
-**Top Stations by Female Residents in Tech**
+**Top Stations by Female Residents in Tech**  
 1. Roosevelt Island - Main St  
 2. 86th St  
 3. 72nd St  
 4. 28th St  
 5. 23rd St  
 
-**Top Stations by Traffic Volume in May**
+**Top Stations by Traffic Volume in May**  
 1. 34th St - Penn Station  
 2. Grand Central - 42nd St  
 3. 34th St - Herald Sq  
