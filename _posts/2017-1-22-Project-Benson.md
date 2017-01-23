@@ -43,7 +43,7 @@ Finding the cumulative station traffic for the month required joining the four w
 4. 23rd St  
 5. 86th St  
 
-From these two lists, it's cear that **86th St** and **23rd St** are great places to focus promotion efforts.
+From these two lists, it's clear that **86th St** and **23rd St** are great places to focus promotion efforts.
 
 ### Outlier
-It's worth noting that Roosevelt Island, located in the East River across from Manhattan's Lenox Hill and Midtown East neighborhoods, registered by far the most women residents in tech, at 354. So even though the Roosevelt Island MTA station is not a high traffic stop, it may be worth sending recruitment teams to this area. Upon further reading I learned that this residential neighborhood, close to Manhattan but quieter and cheaper, is actually the location of a major tech initiative - the Cornell Tech campus, opening in summer 2017. Clearly this area will only be increasing in importance for the New York tech scene in coming months.
+It's worth noting that Roosevelt Island, located in the East River across from Manhattan's Lenox Hill and Midtown East neighborhoods, registered by far the most women residents in computer/engineering/science occupations, at 354. So even though the Roosevelt Island MTA station is not a high traffic stop, it may be worth sending recruitment teams to this area. Upon further reading I learned that this residential neighborhood, close to Manhattan but quieter and cheaper, is actually the location of a major tech initiative - the Cornell Tech campus, opening in summer 2017. Clearly this area will only be increasing in importance for the New York tech scene in coming months.
