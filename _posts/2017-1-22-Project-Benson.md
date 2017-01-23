@@ -13,7 +13,7 @@ The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimiz
 
 ### Demographics Data
 To locate areas with a high density of women residents who work in tech industries, we used public data from the American Community Survey at [Census.gov](http://factfinder.census.gov).
-![Census screenshot]({{site.baseurl}}/images/census_dataV2.png)
+![Census screenshot]({site.baseurl}/images/census_dataV2.png)
 For a detailed view of population density we used data count by Census tract, a small subdivision used for Census data, for each of the 5 boroughs/counties of New York City. The Census website has the ability to create a "heatmap" using the requested data, but this functionality was unavailable at the time of this posting; I'm planning to try again and update this page in the future.  
 
 We joined the population data to a list of subway stations, using their corresponding Census tract location from data on ArcGIS.
