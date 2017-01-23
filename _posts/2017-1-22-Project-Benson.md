@@ -23,7 +23,7 @@ stem_women = pd.read_csv('stem_women.csv')
 df = pd.merge(stations, stem_women, on='BoroCT2010')
 ```
 Here is the list of stations with resident count for women in tech occupations > 100.
-![Census screenshot](https://github.com/ptpro3/ptpro3.github.io/blob/master/images/stations_gt_100.png)
+![Stations with count](https://github.com/ptpro3/ptpro3.github.io/blob/master/images/stations_gt_100.png)
 
 ### Station Traffic Data
 Finding the cumulative station traffic for the month required joining the four weeks of turnstile data and aggregating multiple turnstile machines for each station. In order to deal with turnstile counters with mismatched values or counter resets, we added T/F flags to the datasets at machine/counter changes. After aggregation, we still had some negative values and unexpectedly large values due to further counter value errors. We ignored these values by choosing station counts between 0 and 10,000 per 4 hour timeblock.
