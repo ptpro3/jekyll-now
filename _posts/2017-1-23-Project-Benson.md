@@ -16,10 +16,14 @@ To locate areas with a high density of women residents who work in tech industri
 ![Census screenshot]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_census.png)
   
 For a detailed view of population density we used data count by Census tract, a small subdivision used for Census data, for each of the 5 boroughs/counties of New York City. The Census website has the ability to create a "heatmap" using the requested data:
+  
 ![Census heatmap]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_heatmap.jpeg)
   
-We joined the population data to a list of subway stations, using their corresponding Census tract location from data on ArcGIS.
+  
+We joined the population data to a list of subway stations, using their corresponding Census tract location from data on ArcGIS.  
+  
 ![Stations map]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_stations.png)
+  
   
 Here is the list of stations with resident count for women in tech occupations > 100.
 ![Stations with count]({{site.baseurl}}/Projects/Project1/reports/figures/jupyter_stations_gt_100.png)
