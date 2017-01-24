@@ -6,21 +6,21 @@ title: Project Benson
 The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. In this project my team used publicly available MTA turnstile data, as well as city demographic data, to recommend the best way to deploy recruitment/promotion teams.
 
 ### Initial Assumptions
-- For total turnstile traffic we considered a sum of entries and exits.
+- For total turnstile traffic, we considered a sum of entries and exits.
 - We assumed the gala is being held early in June; thus we used subway data for the 4 weeks of May, 2016.
-- We decided to focus the target demographi on women working in the tech industry.
-- We further assumed the target demographic will use subway stations near their place of residence; we were not considering major commuter stations as commuters would probably be less likely to attend a Gala in the city.
+- We decided to focus the target demographic on women working in the tech industry.
+- We further assumed the target demographic will use subway stations near their place of residence; we were not considering major commuter stations as commuters would probably be less likely to attend a gala in the city.
 
 ### Demographics Data
 To locate areas with a high density of women residents who work in tech industries, we used public data from the American Community Survey at [Census.gov](http://factfinder.census.gov).
-![Census screenshot]({{site.baseurl}}/reports/figures/screenshot_census.png)
+![Census screenshot]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_census.png)
 For a detailed view of population density we used data count by Census tract, a small subdivision used for Census data, for each of the 5 boroughs/counties of New York City. The Census website has the ability to create a "heatmap" using the requested data:
-![Census heatmap]({{site.baseurl}}/reports/figures/screenshot_heatmap.jpeg)
+![Census heatmap]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_heatmap.jpeg)
 
 We joined the population data to a list of subway stations, using their corresponding Census tract location from data on ArcGIS.
-![Stations map]({{site.baseurl}}/reports/figures/screenshot_stations.png)
+![Stations map]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_stations.png)
 Here is the list of stations with resident count for women in tech occupations > 100.
-![Stations with count]({{site.baseurl}}/reports/figures/jupyter_stations_gt_100.png)
+![Stations with count]({{site.baseurl}}/Projects/Project1/reports/figures/jupyter_stations_gt_100.png)
 
 ### Station Traffic Data
 Finding the cumulative station traffic for the month required joining the four weeks of MTA turnstile data and aggregating multiple turnstile machines for each station. In order to deal with turnstile counters with mismatched values or counter resets, we added T/F flags to the datasets at machine/counter changes. After aggregation, we still had some negative values and unexpectedly large values due to further counter value errors. We ignored these values by choosing station counts between 0 and 6,000 per 4 hour timeblock.
@@ -41,7 +41,7 @@ Finding the cumulative station traffic for the month required joining the four w
 5. 86th St  
 
 Creating a combined ranking of the top 50 stations on both lists yielded the following:
-![Rank ScatterPlot]({{site.baseurl}}/reports/figures/jupyter_scatter.png)
+![Rank ScatterPlot]({{site.baseurl}}/Projects/Project1/reports/figures/jupyter_scatter.png)
 
 **Overall Ranking: Best Stations for Promotion  
 1. 86th St 
@@ -50,7 +50,7 @@ Creating a combined ranking of the top 50 stations on both lists yielded the fol
 4. 72nd St 
 5. 28th St 
 **
-![Census Heatmap Detail]({{site.baseurl}}/reports/figures/screenshot_top_stations.png)
+![Census Heatmap Detail]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_top_stations.png)
 
 ### Outlier
 It's worth noting that Roosevelt Island, located in the East River across from Manhattan's Lenox Hill and Midtown East neighborhoods, registered by far the most women residents in computer/engineering/science occupations, at 354. So even though the Roosevelt Island MTA station is not a high traffic stop, it may be worth sending recruitment teams to this area. Upon further reading we learned that this residential neighborhood, close to Manhattan but quieter and cheaper, is actually the location of a major tech initiative - the Cornell Tech campus, opening in summer 2017. Clearly this area will only be increasing in importance for the New York tech scene in coming months.
