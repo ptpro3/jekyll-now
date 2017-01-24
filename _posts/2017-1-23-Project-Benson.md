@@ -3,7 +3,7 @@ layout: post
 title: Project Benson
 ---
 ## Analyzing New York MTA subway turnstile data
-The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. In this project my team used publicly available MTA turnstile data, as well as city demographic data, to recommend the best way to deploy recruitment/promotion teams.
+The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. In this project my team used publicly available MTA turnstile data, as well as city demographic data, to recommend the best way to deploy recruitment / promotion teams.
 
 ### Initial Assumptions
 - For total turnstile traffic, we considered a sum of entries and exits.
@@ -14,16 +14,18 @@ The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimiz
 ### Demographics Data
 To locate areas with a high density of women residents who work in tech industries, we used public data from the American Community Survey at [Census.gov](http://factfinder.census.gov).
 ![Census screenshot]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_census.png)
+  
 For a detailed view of population density we used data count by Census tract, a small subdivision used for Census data, for each of the 5 boroughs/counties of New York City. The Census website has the ability to create a "heatmap" using the requested data:
 ![Census heatmap]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_heatmap.jpeg)
-
+  
 We joined the population data to a list of subway stations, using their corresponding Census tract location from data on ArcGIS.
 ![Stations map]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_stations.png)
+  
 Here is the list of stations with resident count for women in tech occupations > 100.
 ![Stations with count]({{site.baseurl}}/Projects/Project1/reports/figures/jupyter_stations_gt_100.png)
 
 ### Station Traffic Data
-Finding the cumulative station traffic for the month required joining the four weeks of MTA turnstile data and aggregating multiple turnstile machines for each station. In order to deal with turnstile counters with mismatched values or counter resets, we added T/F flags to the datasets at machine/counter changes. After aggregation, we still had some negative values and unexpectedly large values due to further counter value errors. We ignored these values by choosing station counts between 0 and 6,000 per 4 hour timeblock.
+Finding the cumulative station traffic for the month required joining the four weeks of MTA turnstile data and aggregating multiple turnstile machines for each station. In order to deal with turnstile counters with mismatched values or counter resets, we added T/F flags to the datasets at machine/counter changes. After aggregation, we still had some negative values and unexpectedly large values due to further counter value errors. We ignored these values by choosing station counts between 0 and 6,000 per 4-hour timeblock.
 
 ### Identifying Locations to Focus Flyering / Promotion Efforts
 **Top Stations by Female Residents in Tech**  
@@ -43,13 +45,13 @@ Finding the cumulative station traffic for the month required joining the four w
 Creating a combined ranking of the top 50 stations on both lists yielded the following:
 ![Rank ScatterPlot]({{site.baseurl}}/Projects/Project1/reports/figures/jupyter_scatter.png)
 
-**Overall Ranking: Best Stations for Promotion  
-1. 86th St 
-2. 23rd St
-3. Fulton St 
-4. 72nd St 
-5. 28th St 
-**
+### Overall Ranking: Best Stations for Promotion
+1. 86th St  
+2. 23rd St  
+3. Fulton St  
+4. 72nd St  
+5. 28th St  
+  
 ![Census Heatmap Detail]({{site.baseurl}}/Projects/Project1/reports/figures/screenshot_top_stations.png)
 
 ### Outlier
@@ -58,4 +60,4 @@ It's worth noting that Roosevelt Island, located in the East River across from M
 ## Further Considerations
 Further time is required for more in-depth data cleaning, particularly with the MTA turnstile data. We used count cutoff values as a straightforward way to ignore spurious values. It could also be valuable to do a more detailed station traffic analysis using time of day or day of week.
 
-For more details of project, data and associated Python notebook, see [Github repo](https://github.com/ptpro3/ptpro3.github.io/tree/master/Project/Project1)
+For more details of project, data and associated Python notebook, see my [Github repo](https://github.com/ptpro3/ptpro3.github.io/tree/master/Project/Project1).
