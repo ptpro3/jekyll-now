@@ -24,12 +24,47 @@ In this case, I decided that the first film in each franchise would not be an ob
 - The number of Theaters in which the film showed
 
 #### Missing data
+The Number of Theaters in which the film showed was not always available; in this case, I used the average number of theaters from the rest of the films in the franchise.
+#### Questionable data
+As of this writing, three "sequel" films had released in 2017:
+- -Underworld: Blood Wars- on Jan 6
+- -xXx: The Return of Xander Cage- on Jan 20
+- -Resident Evil: The Final Chapter- on Jan 27
+I decided to drop these films from my training dataset; because of their recent release date, their gross earnings will not yet be representative of final earnings for a typical sequel film. However, since # of theaters released and previous average gross information was available, I saved this information to try a Gross earnings prediction later on.
 
-Number of Theaters in which the film showed
--- Where this number was unavailable, replaced '-' with 0; the 0 will later be replaced with the mean number of theaters for the other films in the same franchise. I chose the average as a reasonable estimate.
+### Step 3 - Regression Model
+Here's a pairplot of my features and target variable ("AdjGross") to visualize correlations:  
+  
+![AdjGross Pairplot]({{site.baseurl}}/Projects/Project2/reports/figures/project2_pairplot.png)
+  
+In the pairplot we can see that 'AdjGross' may have some correlation with the variables, particularly 'Theaters' and 'PrevAvgGross'. However, it looks like a polynomial model, or natural log / some other transformation will be required before fitting a linear model.  
+  
+My first run of a linear regression model, using the statsmodels toolkit in Python, returned an adjusted R-squared value of 0.548. Adding 2nd degree polynomial complexity to the regression gave a slightly improved adjusted R-squared of 0.626, and a reasonably random distribution of residuals:  
+  
+![Polynomial Residual Plot]({{site.baseurl}}/Projects/Project2/reports/figures/poly_resid.png)
+  
+However, the other tests provided by statsmodels suggested issues with my model, including skew and kurtosis. I ran a heteroskedasticity test to check for spread of the data:
+```
+polymodel = sm.OLS(y, polyX)
+polyfit = polymodel.fit()
+hetnames = ['Lagrange multiplier statistic', 'p-val', 'f-val', 'f p-val']
+hettest = sm.stats.diagnostic.het_breushpagan(fit.resid, fit.model.exog)
+zip(hetnames,hettest)
+```
+The results returned a very small p-value (order of 1e-9), suggesting that the data was indeed heteroskedastic. For this reason I applied the box-cox transformation to the feature columns, and used Log('AdjGross') as the target value. These changes improved the adjusted R-squared to 0.825, and reduced the skew. Finally, I applied the Elastic Net regularization process to the model for optimization of coefficients. My final model produced a Mean Squared Error of 0.545.  
+  
+To see what kind of predictions this model would provide, I ran it on the 3 new sequels in 2017.
+- -Underworld: Blood Wars- on Jan 6
+- -xXx: The Return of Xander Cage- on Jan 20
+- -Resident Evil: The Final Chapter- on Jan 27
 
+The results, I would say, mostly do not seem reasonable:
+- -Underworld: Blood Wars- on Jan 6
+-- Predicted
+-- test
+- -xXx: The Return of Xander Cage- on Jan 20
+- -Resident Evil: The Final Chapter- on Jan 27
 
-For the regression model, I decided to keep data for films released through 2016, but drop the 3 films released this year; because of their recent release date, their gross earnings will not yet be representative.
 
 
 
