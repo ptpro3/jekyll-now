@@ -18,15 +18,16 @@ See my [Project Notebook](https://github.com/ptpro3/ptpro3.github.io/blob/master
 The bulk of my time spent on this project was this step, processing the data prior to analysis. It's easy to underestimate the amount of time needed to understand the nuances and anomalies in the dataset and account for them before building an analysis model - even for a relatively straightforward list of movies.  
   
 In this case, I decided that the first film in each franchise would not be an observation that I input into the model. Instead, the data for the first film would be included as features for modeling into subsequent sequel films.  I therefore grouped the films by Franchise and appended the first film's data, as well as average earnings data for the franchise, to the sequel films within that franchise. Here is the final set of features that I created for modeling:  
-+ The Average Adjusted Gross of all previous films in the franchise  
-+ The Adjusted Gross of the very first film in the franchise  
-+ The Release Date of the previous film in the franchise  
-* The Release Date of the very first film in the franchise  
-* The Series Number of the film in that franchise  
-* The number of Theaters in which the film showed  
+- The Average Adjusted Gross of all previous films in the franchise  
+- The Adjusted Gross of the very first film in the franchise  
+- The Release Date of the previous film in the franchise  
+- The Release Date of the very first film in the franchise  
+- The Series Number of the film in that franchise  
+- The number of Theaters in which the film showed  
 
 #### Missing data
 The Number of Theaters in which the film showed was not always available; in this case, I used the average number of theaters from the rest of the films in the franchise.  
+
 #### Questionable data
 As of this writing, three "sequel" films had released in 2017:  
 * _Underworld: Blood Wars_ on Jan 6
@@ -57,13 +58,13 @@ zip(hetnames,hettest)
 The results returned a very small p-value (order of 1e-9), suggesting that the data was indeed heteroskedastic. For this reason I applied the box-cox transformation to the feature columns, and used Log(`AdjGross`) as the target value. These changes improved the adjusted R-squared to 0.825, and reduced the skew. Finally, I applied the Elastic Net regularization process to the model for optimization of coefficients. My final model produced a Mean Squared Error of 0.545.  
   
 To see what kind of predictions this model would provide, I ran it on the 3 new sequels in 2017.  
-* _Underworld: Blood Wars_ on Jan 6  
+- _Underworld: Blood Wars_ on Jan 6  
 ..* Predicted Gross $3.6M  
 ..* Actual as of 2/1 $16.6M  
-* _xXx: The Return of Xander Cage_ on Jan 20  
+- _xXx: The Return of Xander Cage_ on Jan 20  
 ..* Predicted Gross $752M  
 ..* Actual as of 2/1 $35.8M  
-* _Resident Evil: The Final Chapter_ on Jan 27  
+- _Resident Evil: The Final Chapter_ on Jan 27  
 ..* Predicted Gross $150M  
 ..* Actual as of 2/1 $29.8M  
 
