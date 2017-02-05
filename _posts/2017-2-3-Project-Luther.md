@@ -27,9 +27,9 @@ In this case, I decided that the first film in each franchise would not be an ob
 The Number of Theaters in which the film showed was not always available; in this case, I used the average number of theaters from the rest of the films in the franchise.
 #### Questionable data
 As of this writing, three "sequel" films had released in 2017:
-- -Underworld: Blood Wars- on Jan 6
-- -xXx: The Return of Xander Cage- on Jan 20
-- -Resident Evil: The Final Chapter- on Jan 27
+- _Underworld: Blood Wars_ on Jan 6
+- _xXx: The Return of Xander Cage_ on Jan 20
+- _Resident Evil: The Final Chapter_ on Jan 27
 I decided to drop these films from my training dataset; because of their recent release date, their gross earnings will not yet be representative of final earnings for a typical sequel film. However, since # of theaters released and previous average gross information was available, I saved this information to try a Gross earnings prediction later on.
 
 ### Step 3 - Regression Model
@@ -54,19 +54,17 @@ zip(hetnames,hettest)
 The results returned a very small p-value (order of 1e-9), suggesting that the data was indeed heteroskedastic. For this reason I applied the box-cox transformation to the feature columns, and used Log('AdjGross') as the target value. These changes improved the adjusted R-squared to 0.825, and reduced the skew. Finally, I applied the Elastic Net regularization process to the model for optimization of coefficients. My final model produced a Mean Squared Error of 0.545.  
   
 To see what kind of predictions this model would provide, I ran it on the 3 new sequels in 2017.
-- -Underworld: Blood Wars- on Jan 6
-- -xXx: The Return of Xander Cage- on Jan 20
-- -Resident Evil: The Final Chapter- on Jan 27
+- _Underworld: Blood Wars_ on Jan 6  
+-- Predicted Gross $3.6M
+-- Actual as of 2/1 $16.6M
+- _xXx: The Return of Xander Cage_ on Jan 20  
+-- Predicted Gross $752M
+-- Actual as of 2/1 $35.8M
+- _Resident Evil: The Final Chapter_ on Jan 27  
+-- Predicted Gross $150M
+-- Actual as of 2/1 $29.8M
 
-The results, I would say, mostly do not seem reasonable:
-- -Underworld: Blood Wars- on Jan 6
--- Predicted
--- test
-- -xXx: The Return of Xander Cage- on Jan 20
-- -Resident Evil: The Final Chapter- on Jan 27
-
-
-
-
-
-
+### Thoughts
+The above results, I would say, mostly do not seem reasonable. My next steps on the model for this project would be to pinpoint what's causing the extreme values in the above prediction. Looking back at the statsmodels output for summary statistics on my model is a great starting point.  
+  
+Even if I can improve on this model given the data I have, it's important to consider other factors that could contribute to a sequel films success, such as the number of key actors from the previous films that return for the sequel, and the budget of the film itself. Although it's impossible to know exactly how any particular film will do in the future, I'm confident that with more time spent on this model I'll be able to improve my predictions.
