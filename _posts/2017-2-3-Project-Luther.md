@@ -30,9 +30,9 @@ The Number of Theaters in which the film showed was not always available; in thi
 
 #### Questionable data
 As of this writing, three "sequel" films had released in 2017:  
-* _Underworld: Blood Wars_ on Jan 6
-* _xXx: The Return of Xander Cage_ on Jan 20
-* _Resident Evil: The Final Chapter_ on Jan 27  
+- _Underworld: Blood Wars_ on Jan 6
+- _xXx: The Return of Xander Cage_ on Jan 20
+- _Resident Evil: The Final Chapter_ on Jan 27  
 I decided to drop these films from my training dataset; because of their recent release date, their gross earnings will not yet be representative of final earnings for a typical sequel film. However, since number of theaters released and previous average gross information was available, I saved this information to try a Gross earnings prediction later on.
 
 ### Step 3 - Regression Model
