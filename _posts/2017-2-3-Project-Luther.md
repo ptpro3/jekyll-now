@@ -63,14 +63,14 @@ To see what kind of predictions this model would provide, I ran it on the 3 new 
 
 #### 2017 Sequels - Predictions:
 - _Underworld: Blood Wars_ on Jan 6  
-+ Predicted Gross $3.6M  
-+ Actual as of 2/1 $16.6M  
+ + Predicted Gross $3.6M  
+ + Actual as of 2/1 $16.6M  
 - _xXx: The Return of Xander Cage_ on Jan 20  
-+ Predicted Gross $752M  
-+ Actual as of 2/1 $35.8M  
+ + Predicted Gross $752M  
+ + Actual as of 2/1 $35.8M  
 - _Resident Evil: The Final Chapter_ on Jan 27  
-+ Predicted Gross $150M  
-+ Actual as of 2/1 $29.8M  
+ + Predicted Gross $150M  
+ + Actual as of 2/1 $29.8M  
 
 ### Thoughts
 The above results, I would say, mostly do not seem reasonable. My next steps on the model for this project would be to pinpoint what's causing the extreme values in the above prediction. Looking back at the statsmodels output for summary statistics on my model is a great starting point.  
