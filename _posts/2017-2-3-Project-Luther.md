@@ -17,7 +17,9 @@ See my [Project Notebook](https://github.com/ptpro3/ptpro3.github.io/blob/master
 ### Step 2 - Cleaning up and preparing data for regression analysis
 The bulk of my time spent on this project was this step, processing the data prior to analysis. It's easy to underestimate the amount of time needed to understand the nuances and anomalies in the dataset and account for them before building an analysis model - even for a relatively straightforward list of movies.  
   
-In this case, I decided that the first film in each franchise would not be an observation that I input into the model. Instead, the data for the first film would be included as features for modeling into subsequent sequel films.  I therefore grouped the films by Franchise and appended the first film's data, as well as average earnings data for the franchise, to the sequel films within that franchise. Here is the final set of features that I created for modeling:  
+In this case, I decided that the first film in each franchise would not be an observation that I input into the model. Instead, the data for the first film would be included as features for modeling into subsequent sequel films.  I therefore grouped the films by Franchise and appended the first film's data, as well as average earnings data for the franchise, to the sequel films within that franchise.
+
+#### Final set of features created for modeling
 - The Average Adjusted Gross of all previous films in the franchise  
 - The Adjusted Gross of the very first film in the franchise  
 - The Release Date of the previous film in the franchise  
