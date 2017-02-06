@@ -2,8 +2,14 @@
 # This file contains configuration flags to customize your site
 #
 
+#
+title: Prashant Tatineni
+
 # Name of your site (displayed in the header)
 name: Prashant Tatineni
+
+#
+show_downloads: true
 
 # Short bio or description (displayed in the header)
 description: Data Scientist at Metis
