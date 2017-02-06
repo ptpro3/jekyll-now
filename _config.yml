@@ -2,9 +2,6 @@
 # This file contains configuration flags to customize your site
 #
 
-#
-title: Prashant Tatineni
-
 # Name of your site (displayed in the header)
 name: Prashant Tatineni
 
@@ -16,9 +13,6 @@ description: Data Scientist at Metis
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-90744512-1
-
-#
-theme: jekyll-theme-cayman
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars1.githubusercontent.com/u/14060620?v=3&u=471332a73def3a3426f4ed35bdd428bc83159d1f&s=400
