@@ -8,8 +8,18 @@
 This challenge uses the [W3Schools SQL playground](http://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all). Please add solutions to this markdown file and submit.
 
 1. Which customers are from the UK?
+```sql
+SELECT * FROM Customers WHERE Country = 'UK';
+```
 
 2. What is the name of the customer who has the most orders?
+```sql
+SELECT CustomerName, COUNT(*) FROM Customers C
+JOIN Orders O ON C.CustomerID = O.CustomerID
+GROUP BY O.CustomerID
+ORDER BY 2 DESC LIMIT 1;
+```
+*Ernst Handel*
 
 3. Which supplier has the highest average product price?
 
