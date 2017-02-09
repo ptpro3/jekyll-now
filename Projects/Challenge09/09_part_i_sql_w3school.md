@@ -11,7 +11,6 @@ This challenge uses the [W3Schools SQL playground](http://www.w3schools.com/sql/
 ```sql
 SELECT * FROM Customers WHERE Country = 'UK';
 ```
-
 2. What is the name of the customer who has the most orders?
 ```sql
 SELECT CustomerName, COUNT(*) FROM Customers C
