@@ -19,7 +19,7 @@ JOIN Orders O ON C.CustomerID = O.CustomerID
 GROUP BY O.CustomerID
 ORDER BY 2 DESC LIMIT 1;
 ```
-*Ernst Handel*
+>*Ernst Handel*
 
 3. Which supplier has the highest average product price?
 
