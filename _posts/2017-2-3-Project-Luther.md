@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Luther
+title: Metis Project 2
 ---
 ## Analyzing Data for Movie Sequels
 Can we predict the success of a movie sequel based on the performance of previous films in the franchise? I set out to answer this question for our second project at Metis.  
