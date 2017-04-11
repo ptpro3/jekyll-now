@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Benson
+title: Metis Project 1
 ---
 ## Analyzing New York MTA subway turnstile data
 The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. In this project my team used publicly available MTA turnstile data, as well as city demographic data, to recommend the best way to deploy recruitment / promotion teams.
