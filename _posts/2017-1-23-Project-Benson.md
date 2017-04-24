@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Metis Project 1
+title: Analyzing New York MTA subway data
 ---
-## Analyzing New York MTA subway turnstile data
-The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. In this project my team used publicly available MTA turnstile data, as well as city demographic data, to recommend the best way to deploy recruitment / promotion teams.
+This was my first project as part of the Metis Data Science Bootcamp. The scenario provided was as follows: The fictional group, WomenTechWomenYes (WTWY), wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. In this project my team used publicly available MTA subway turnstile data, as well as city demographic data, to recommend the best way to deploy recruitment / promotion teams.
 
 ### Initial Assumptions
 - For total turnstile traffic, we considered a sum of entries and exits.
@@ -62,6 +61,6 @@ Creating a combined ranking of the top 50 stations on both lists yielded the fol
 It's worth noting that Roosevelt Island, located in the East River across from Manhattan's Lenox Hill and Midtown East neighborhoods, registered by far the most women residents in computer/engineering/science occupations, at 354. So even though the Roosevelt Island MTA station is not a high traffic stop, it may be worth sending recruitment teams to this area. Upon further reading we learned that this residential neighborhood, close to Manhattan but quieter and cheaper, is actually the location of a major tech initiative - the Cornell Tech campus, opening in summer 2017. Clearly this area will only be increasing in importance for the New York tech scene in coming months.
 
 ## Further Considerations
-Further time is required for more in-depth data cleaning, particularly with the MTA turnstile data. We used count cutoff values as a straightforward way to ignore spurious values. It could also be valuable to do a more detailed station traffic analysis using time of day or day of week.
+Further time could be spent on more in-depth data cleaning, particularly with the MTA turnstile data. We used count cutoff values as a straightforward way to ignore spurious values. It could also be valuable to do a more detailed station traffic analysis using time of day or day of week.
 
-For more details of project, data and associated Python notebook, see my [Github repo](https://github.com/ptpro3/ptpro3.github.io/tree/master/Project/Project1).
+For more step-by-step details of the project, see my [iPython Notebook](https://github.com/ptpro3/ptpro3.github.io/blob/master/Projects/Project1/Project1_Prashant.ipynb).
