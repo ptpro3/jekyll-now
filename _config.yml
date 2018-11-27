@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Prashant Tatineni
+name: Prashant
 
 #
 show_downloads: true
@@ -15,7 +15,7 @@ description: Data Science, Machine Learning
 google_analytics: UA-90744512-1
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars1.githubusercontent.com/u/14060620?v=3&u=471332a73def3a3426f4ed35bdd428bc83159d1f&s=400
+# avatar: https://avatars1.githubusercontent.com/u/14060620?v=3&u=471332a73def3a3426f4ed35bdd428bc83159d1f&s=400
 
 #
 # Flags below are optional
@@ -29,7 +29,7 @@ footer-links:
   flickr:
   github: ptpro3
   instagram:
-  linkedin: https://www.linkedin.com/in/prashanttatineni
+#  linkedin: https://www.linkedin.com/in/prashanttatineni
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: 
