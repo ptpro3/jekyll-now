@@ -7,5 +7,5 @@ The Python script solves using a linearly constrained quadratic optimization pro
 
 The Python script works as an API which listens for / receives data (via http) from Excel, then solves and populates the Power Rankings in the Excel sheet. The Excel sheet uses a VBA script to send/receive via http.
 
-[Python API](https://github.com/ptpro3/ptpro3.github.io/blob/master/Projects/SolverAPI.py)
+[Python API](https://github.com/ptpro3/ptpro3.github.io/blob/master/Projects/SolverAPI.py)  
 [Excel Data File](https://github.com/ptpro3/ptpro3.github.io/blob/master/Projects/NCAA_Data.xlsm)
