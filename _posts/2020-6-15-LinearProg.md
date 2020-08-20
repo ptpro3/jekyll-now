@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear Programming: College Football Power Rankings
+title: Linear Programming - College Football Power Rankings
 ---
 This tool takes in statistics from college football games as input and generates Power Rankings for each team for Rush, Pass, Returns, and Special Teams. The rankings of each team are dependent on the team's performance relative to all other teams they played games against.  
 
