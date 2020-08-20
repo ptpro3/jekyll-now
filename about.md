@@ -1,10 +1,7 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-I have an engineering background and graduate research experience in computational science.
-
-RoboCuller App support:
-Contact below.
+Data Scientist with an engineering background and graduate research experience in computational science.
